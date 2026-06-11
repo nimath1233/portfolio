@@ -1,0 +1,8 @@
+*.zip
+*.log
+.gemini/
+__pycache__/
+*.py
+content_output.txt
+existing_content.json
+lecture_content.json

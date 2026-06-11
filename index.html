@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="R.N.T Jayawardana – IT Student & Full-Stack Developer specializing in MERN stack and network engineering. Professional e-Portfolio showcasing academic deliverables and reflective journey." />
+  <meta name="keywords" content="R.N.T Jayawardana, IT Student, Full-Stack Developer, MERN Stack, Network Engineering, Portfolio, Professional Skills" />
+  <meta name="author" content="R.N.T Jayawardana" />
+  <meta property="og:title" content="R.N.T Jayawardana | IT Student & Developer" />
+  <meta property="og:description" content="Professional e-Portfolio – MERN Stack Developer & Network Engineering Enthusiast" />
+  <title>R.N.T Jayawardana | IT Student & Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+      }
+    })();
+  </script>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ===== LOADING SCREEN ===== -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">MY PORTFOLIO</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+      <p class="loader-text">Initializing Portfolio...</p>
+    </div>
+  </div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>MY PORTFOLIO<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#portfolio" class="nav-link" data-section="portfolio">e-Portfolio</a></li>
+        <li><a href="#project" class="nav-link" data-section="project">Our Project</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="particle-field" id="particleField"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for Opportunities
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-greeting">Hello, I'm</span>
+        <span class="hero-name">R.N.T Jayawardana</span>
+        <span class="hero-role">
+          <span class="role-prefix">I build </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor-blink">|</span>
+        </span>
+      </h1>
+      <p class="hero-description">
+        IT Student & Full-Stack Developer specializing in the <span class="highlight">MERN Stack</span> 
+        and <span class="highlight">Network Engineering</span>. Creating scalable, secure, and efficient digital solutions.
+      </p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn btn-primary" id="heroPortfolio">
+          <span>View e-Portfolio</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#about" class="btn btn-secondary" id="heroAbout">
+          <span>About Me</span>
+        </a>
+      </div>
+
+    </div>
+    <div class="hero-image-wrapper">
+      <div class="hero-image-frame">
+        <div class="frame-ring ring-1"></div>
+        <div class="frame-ring ring-2"></div>
+        <div class="frame-ring ring-3"></div>
+        <div class="hero-image-container">
+          <img src="profile.png" alt="R.N.T Jayawardana" class="hero-image" id="heroImage" />
+        </div>
+        <div class="tech-badge badge-mern">MERN</div>
+        <div class="tech-badge badge-net">Network</div>
+        <div class="tech-badge badge-cloud">Cloud</div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01 / About</span>
+        <h2 class="section-title">Who I Am</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-image-col">
+          <div class="about-image-wrapper">
+            <img src="profile.png" alt="R.N.T Jayawardana" class="about-image" />
+            <div class="about-image-border"></div>
+            <div class="experience-card">
+              <span class="exp-number">IT</span>
+              <span class="exp-label">Student</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <h3 class="about-subtitle">IT Student & Full-Stack Developer</h3>
+          <p class="about-text">
+            I am a driven student and full-stack developer specializing in the <strong>MERN (MongoDB, Express, React, Node.js)</strong> stack and <strong>network engineering</strong>. Combining a strong technical foundation in building cloud-integrated systems with an interest in robust network infrastructure design, I focus on creating scalable, efficient, and secure digital solutions.
+          </p>
+          <p class="about-text">
+            This e-portfolio showcases my academic deliverables and reflective journey through the <strong>Professional Skills module</strong>. It bridges the gap between technical execution and essential corporate proficiencies—such as ethics, emotional intelligence, and strategic negotiation—positioning me to transition smoothly into the professional tech industry.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Problem Solver</span>
+            <span class="tag">Team Player</span>
+            <span class="tag">Fast Learner</span>
+            <span class="tag">Detail Oriented</span>
+          </div>
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Name</span>
+              <span class="info-value">R.N.T Jayawardana</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Role</span>
+              <span class="info-value">IT Student / Developer</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Specialization</span>
+              <span class="info-value">MERN Stack + Networking</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Status</span>
+              <span class="info-value status-open">Open to Work</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02 / Skills</span>
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category" id="skillFrontend">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="90">
+              <div class="skill-info"><span>HTML & CSS</span><span class="skill-pct">90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item" data-level="80">
+              <div class="skill-info"><span>JavaScript</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item" data-level="75">
+              <div class="skill-info"><span>React.js</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skillBackend">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <h3>Backend</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="78">
+              <div class="skill-info"><span>Node.js</span><span class="skill-pct">78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item" data-level="72">
+              <div class="skill-info"><span>Express.js</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+            <div class="skill-item" data-level="70">
+              <div class="skill-info"><span>MongoDB</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skillNetwork">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+            </div>
+            <h3>Networking</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="75">
+              <div class="skill-info"><span>Network Design</span><span class="skill-pct">75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item" data-level="70">
+              <div class="skill-info"><span>TCP/IP Protocols</span><span class="skill-pct">70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+            <div class="skill-item" data-level="65">
+              <div class="skill-info"><span>Cloud Infrastructure</span><span class="skill-pct">65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skillTools">
+          <div class="skill-category-header">
+            <div class="skill-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Tools & Others</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item" data-level="85">
+              <div class="skill-info"><span>Git & GitHub</span><span class="skill-pct">85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item" data-level="72">
+              <div class="skill-info"><span>Linux / CLI</span><span class="skill-pct">72%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="72"></div></div>
+            </div>
+            <div class="skill-item" data-level="68">
+              <div class="skill-info"><span>SQL Databases</span><span class="skill-pct">68%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="68"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech Stack Pills -->
+      <div class="tech-stack">
+        <h3 class="tech-stack-title">Tech Stack</h3>
+        <div class="tech-pills">
+          <span class="tech-pill">MongoDB</span>
+          <span class="tech-pill">Express.js</span>
+          <span class="tech-pill">React.js</span>
+          <span class="tech-pill">Node.js</span>
+          <span class="tech-pill">JavaScript</span>
+          <span class="tech-pill">Python</span>
+          <span class="tech-pill">Java</span>
+          <span class="tech-pill">Git</span>
+          <span class="tech-pill">Linux</span>
+          <span class="tech-pill">SQL</span>
+          <span class="tech-pill">TCP/IP</span>
+          <span class="tech-pill">Cloud</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== E-PORTFOLIO / SELF-REFLECTIVE SECTION ===== -->
+  <section class="section portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03 / e-Portfolio</span>
+        <h2 class="section-title">Self-Reflective Portfolio</h2>
+        <p class="section-subtitle">Professional Skills Module — Academic Deliverables & Reflective Journey</p>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="portfolio-intro">
+        <p>Key professional skills developed through the Professional Skills module — bridging technical ability with corporate readiness.</p>
+      </div>
+
+      <div class="portfolio-modules">
+        <style>
+          .portfolio-module.module-link {
+            cursor: pointer;
+            text-decoration: none;
+          }
+          .module-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 12px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            opacity: 0;
+            transform: translateX(-6px);
+            transition: opacity 0.25s, transform 0.25s;
+          }
+          .portfolio-module.module-link:hover .module-read-more {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        </style>
+
+        <a href="cv-writing.html" target="_blank" class="portfolio-module module-link" id="moduleCV">
+          <div class="module-icon module-icon-1">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">CV Writing</h3>
+            <p class="module-desc">Crafted a professional, ATS-optimized CV tailored to IT roles, learning to present skills and experience clearly and competitively.</p>
+            <div class="module-reflection">
+              <span class="reflection-label">💭 Reflection</span>
+              <p>Technical skills matter — but how you present them is equally critical.</p>
+            </div>
+            <div class="module-tags">
+              <span>Personal Branding</span><span>Written Communication</span><span>Career Development</span>
+            </div>
+            <div class="module-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="code-of-ethics.html" target="_blank" class="portfolio-module module-link" id="moduleEthics">
+          <div class="module-icon module-icon-2">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">Code of Ethics in IT</h3>
+            <p class="module-desc">Explored ethical responsibilities in IT — covering data privacy, intellectual property, and responsible AI development.</p>
+            <div class="module-reflection">
+              <span class="reflection-label">💭 Reflection</span>
+              <p>Every line of code carries real-world consequences — ethics is a developer's responsibility.</p>
+            </div>
+            <div class="module-tags">
+              <span>Data Privacy</span><span>Professional Responsibility</span><span>Ethical Decision-Making</span>
+            </div>
+            <div class="module-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="emotional-intelligence.html" target="_blank" class="portfolio-module module-link" id="moduleEI">
+          <div class="module-icon module-icon-3">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">Emotional Intelligence</h3>
+            <p class="module-desc">Studied the five components of EI — self-awareness, self-regulation, motivation, empathy, and social skills — and their role in tech team leadership.</p>
+            <div class="module-reflection">
+              <span class="reflection-label">💭 Reflection</span>
+              <p>EI amplifies technical strengths — empathy and composure make better teammates and leaders.</p>
+            </div>
+            <div class="module-tags">
+              <span>Leadership</span><span>Team Collaboration</span><span>Self-Awareness</span>
+            </div>
+            <div class="module-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="interview-skills.html" target="_blank" class="portfolio-module module-link" id="moduleInterview">
+          <div class="module-icon module-icon-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">Interview Skills</h3>
+            <p class="module-desc">Practiced STAR-method responses, technical problem-solving, and mock interviews for both HR and technical rounds.</p>
+            <div class="module-reflection">
+              <span class="reflection-label">💭 Reflection</span>
+              <p>Mock interviews built confidence and sharpened how I articulate my experience to any audience.</p>
+            </div>
+            <div class="module-tags">
+              <span>Communication</span><span>STAR Method</span><span>Confidence Building</span>
+            </div>
+            <div class="module-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="negotiation-skills.html" target="_blank" class="portfolio-module module-link" id="moduleNegotiation">
+          <div class="module-icon module-icon-5">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">Negotiation Skills</h3>
+            <p class="module-desc">Developed principled negotiation frameworks for salary discussions, project scope, and conflict resolution — focused on win-win outcomes.</p>
+            <div class="module-reflection">
+              <span class="reflection-label">💭 Reflection</span>
+              <p>Negotiation isn't confrontation — it's collaboration toward shared solutions.</p>
+            </div>
+            <div class="module-tags">
+              <span>Conflict Resolution</span><span>Strategic Thinking</span><span>Win-Win Outcomes</span>
+            </div>
+            <div class="module-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <!-- Etiquettes sub-group -->
+        <a href="email-telephone-etiquettes.html" target="_blank" class="portfolio-module module-link" id="moduleEtiquetteEmail">
+          <div class="module-icon module-icon-6">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.19h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">Email &amp; Telephone Etiquettes</h3>
+            <p class="module-desc">Mastered professional email writing and telephone call handling — communicating clearly and respectfully in any corporate context.</p>
+            <div class="module-reflection">
+              <span class="reflection-label">💭 Reflection</span>
+              <p>Every email and call is an opportunity to build or break your professional reputation.</p>
+            </div>
+            <div class="module-tags">
+              <span>Email Communication</span><span>Telephone Skills</span><span>Workplace Culture</span>
+            </div>
+            <div class="module-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="grooming-etiquettes.html" target="_blank" class="portfolio-module module-link" id="moduleEtiquetteGrooming">
+          <div class="module-icon module-icon-1">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">Grooming Etiquettes</h3>
+            <p class="module-desc">Learned professional appearance standards — dress codes, personal grooming, and why first impressions matter in the workplace.</p>
+            <div class="module-reflection">
+              <span class="reflection-label">💭 Reflection</span>
+              <p>Your appearance speaks before you do — grooming is respect in action.</p>
+            </div>
+            <div class="module-tags">
+              <span>Professional Image</span><span>Dress Codes</span><span>First Impressions</span>
+            </div>
+            <div class="module-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="dining-etiquettes.html" target="_blank" class="portfolio-module module-link" id="moduleEtiquetteDining">
+          <div class="module-icon module-icon-2">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">Dining Etiquettes</h3>
+            <p class="module-desc">Explored the rules of professional dining — table settings, business meal conduct, and how to build relationships over a formal dinner.</p>
+            <div class="module-reflection">
+              <span class="reflection-label">💭 Reflection</span>
+              <p>How you eat at the table reflects how you behave in the boardroom.</p>
+            </div>
+            <div class="module-tags">
+              <span>Table Manners</span><span>Business Meals</span><span>Professional Presence</span>
+            </div>
+            <div class="module-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="employability-skills.html" target="_blank" class="portfolio-module module-link" id="moduleEmployability">
+          <div class="module-icon module-icon-3">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">Employability Skills</h3>
+            <p class="module-desc">Discovered core transferable skills — communication, teamwork, problem-solving, and the Johari Window for self-awareness.</p>
+            <div class="module-reflection">
+              <span class="reflection-label">💭 Reflection</span>
+              <p>Qualifications open doors — employability skills determine how far you walk through them.</p>
+            </div>
+            <div class="module-tags">
+              <span>Teamwork</span><span>Self-Awareness</span><span>Adaptability</span>
+            </div>
+            <div class="module-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="portfolio-writing.html" target="_blank" class="portfolio-module module-link" id="modulePortfolio">
+          <div class="module-icon module-icon-4">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="module-content">
+            <h3 class="module-title">Portfolio Writing</h3>
+            <p class="module-desc">Learned how to build a professional e-portfolio to showcase skills, projects, and growth — this very site is the result of that learning.</p>
+            <div class="module-reflection">
+              <span class="reflection-label">💭 Reflection</span>
+              <p>A portfolio is the proof that turns your promises into credibility.</p>
+            </div>
+            <div class="module-tags">
+              <span>Personal Branding</span><span>Storytelling</span><span>Digital Presence</span>
+            </div>
+            <div class="module-read-more">Read More <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OUR PROJECT SECTION ===== -->
+  <section class="section project-section" id="project">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04 / Our Project</span>
+        <h2 class="section-title">Community Service Project</h2>
+        <p class="section-subtitle">Tech-Fusion 2026 — Empowering the Future through IT Education</p>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="project-brief-grid">
+        <div class="project-logo-frame">
+          <div class="project-logo-glow"></div>
+          <img src="images/project_img_p1_1.jpg" alt="Tech-Fusion 2026 Logo" class="project-logo" />
+        </div>
+        <div class="project-brief-content">
+          <h3 class="project-brief-title">Tech-Fusion 2026: Bridging the Digital Divide</h3>
+          <p class="project-brief-desc">
+            As a key part of our Professional Skills module, our group (Group 13) collaborated to design and execute a community service IT workshop. We selected <strong>WP/NG Dharmashoka Maha Vidyalaya</strong>, where we set up a temporary "Mobile Tech Lab" using our personal laptop workstations to give 25 students their first hands-on experience with modern coding.
+          </p>
+          <div class="project-highlights">
+            <div class="highlight-item">
+              <span class="highlight-icon">🖥️</span>
+              <div class="highlight-info">
+                <h4>Mobile Lab Setup</h4>
+                <p>Deployed 12 laptops to build a temporary interactive computer lab.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🎓</span>
+              <div class="highlight-info">
+                <h4>Core Curriculum</h4>
+                <p>Introduced web development (HTML/CSS), cybersecurity, and logic.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🤝</span>
+              <div class="highlight-info">
+                <h4>1-on-1 Guidance</h4>
+                <p>Structured support with team members acting as individual lab guides.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-icon">🎁</span>
+              <div class="highlight-info">
+                <h4>Donation Initiative</h4>
+                <p>Supplied A4 paper, whiteboard markers, color pens, and stationery.</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-cta-wrapper">
+            <a href="community-project.html" target="_blank" class="btn btn-primary btn-project-cta">
+              <span>View Project Details</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION REMOVED -->
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>MY PORTFOLIO<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-text">R.N.T Jayawardana · IT Student & Full-Stack Developer</p>
+        <p class="footer-copy">© 2026 R.N.T Jayawardana. Built with passion & code.</p>
+      </div>
+      <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+      </button>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
